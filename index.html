@@ -1,0 +1,28 @@
+<html>
+	<head>
+	  <title>simple-todos</title>
+	   <script type="text/javascript" src="quiet.js"></script>
+	   <script type="text/javascript" src="main.js"></script>
+	   <script type="text/javascript" src="sendtext.js"></script>
+	   <script async type="text/javascript" src="quiet-emscripten.js"></script>
+	</head>
+
+	<body>
+	  <h1>Welcome to Test Sound!</h1>
+
+	  <div class="hidden" data-quiet-profile-name="audible"></div>
+	    <div class="wrapper">
+	      <header>
+	        <h1>Send Text</h1>
+	      </header>
+	      <section>
+	      <div class="hidden" data-quiet-warning></div>
+	      <div class="form-group">
+	        <textarea autofocus="true" autocapitalize="none" autocomplete="off" spellcheck="off" class="form-control" style="resize:none" rows="5" data-quiet-text-input></textarea>
+	      </div>
+	      <button type="button" class="btn btn-default" style="width:100%" data-quiet-send-button data-quiet-sending-text="Sending...">Send</button>
+	      </section>
+	    </div>
+
+	</body>
+</html>
