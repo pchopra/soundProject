@@ -100,7 +100,7 @@ var Quiet = (function() {
             prefix += "/";
         }
         var profilesPath = prefix + "quiet-profiles.json";
-        console.log(profilesPath)
+        console.log("Profiles Path: " profilesPath)
 
         var fetch = new Promise(function(resolve, reject) {
             var xhr = new XMLHttpRequest();
