@@ -1,7 +1,7 @@
 var TextReceiver = (function() {
     Quiet.init({
-        profilesPrefix: "/",
-        memoryInitializerPrefix: "/",
+        profilesPrefix: "/soundProject/",
+        memoryInitializerPrefix: "/soundProject/",
         libfecPrefix: "/"
     });
     var target;
