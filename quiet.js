@@ -92,7 +92,6 @@ var Quiet = (function() {
     };
 
     function setProfilesPrefix(prefix) {
-        console.log("prefix " + prefix);
         if (profilesFetched) {
             return;
         }
@@ -104,7 +103,6 @@ var Quiet = (function() {
         var fetch = new Promise(function(resolve, reject) {
             var xhr = new XMLHttpRequest();
             xhr.overrideMimeType("application/json");
-            console.log("Profiles Path: " + profilesPath);
             xhr.open("GET", profilesPath, true);
             xhr.onload = function() {
                 if (this.status >= 200 && this.status < 300) {

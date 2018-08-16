@@ -1,6 +1,6 @@
 var TextTransmitter = (function() {
     Quiet.init({
-        profilesPrefix: "/",
+        profilesPrefix: "/soundProject/",
         memoryInitializerPrefix: "/",
         libfecPrefix: "/"
     });
