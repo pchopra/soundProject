@@ -22,14 +22,14 @@ var TextReceiver = (function() {
         };
 
     function onReceiverCreateFail(reason) {
-        infobox.textContent = "onReceiverCreateFail "
+        infobox.textContent = "onReceiverCreateFail ";
         console.log("failed to create quiet receiver: " + reason);
         warningbox.classList.remove("hidden");
         warningbox.textContent = "Sorry, it looks like this example is not supported by your browser. Please give permission to use the microphone or try again in Google Chrome or Microsoft Edge."
     };
 
     function onReceiveFail(num_fails) {
-        infobox.textContent = "onReceiveFail "
+        infobox.textContent = "onReceiveFail ";
         warningbox.classList.remove("hidden");
         warningbox.textContent = "We didn't quite get that. It looks like you tried to transmit something. You may need to move the transmitter closer to the receiver and set the volume to 50%."
     };
