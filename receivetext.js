@@ -1,12 +1,12 @@
 var TextReceiver = (function() {
     Quiet.init({
-        profilesPrefix: "/soundProject/",
-        memoryInitializerPrefix: "/soundProject/",
-        libfecPrefix: "/soundProject/"
+        // profilesPrefix: "/soundProject/",
+        // memoryInitializerPrefix: "/soundProject/",
+        // libfecPrefix: "/soundProject/"
 
-        // profilesPrefix: "/",
-        // memoryInitializerPrefix: "/",
-        // libfecPrefix: "/"
+        profilesPrefix: "/",
+        memoryInitializerPrefix: "/",
+        libfecPrefix: "/"
     });
     var target;
     var content = new ArrayBuffer(0);
@@ -16,8 +16,9 @@ var TextReceiver = (function() {
 
     function onReceive(recvPayload) {
         infobox.textContent = "Quiet received data " + Math.random();
-        content = Quiet.mergeab(content, recvPayload);
-        target.textContent = Quiet.ab2str(content);
+        content = recvPayload;
+        //content = Quiet.mergeab(content, recvPayload);
+        target.textContent = "Welcome to your ride " + Quiet.ab2str(content);
         warningbox.classList.add("hidden");
         };
 
