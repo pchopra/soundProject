@@ -15,7 +15,7 @@ var TextReceiver = (function() {
     var infobox;
 
     function onReceive(recvPayload) {
-        infobox.textContent = "Quiet received data";
+        infobox.textContent = "Quiet received data " + Math.random();
         content = Quiet.mergeab(content, recvPayload);
         target.textContent = Quiet.ab2str(content);
         warningbox.classList.add("hidden");
@@ -33,7 +33,7 @@ var TextReceiver = (function() {
     };
 
     function onQuietReady() {
-        infobox.textContent = "Quiet is ready";
+        //infobox.textContent = "Quiet is ready";
         var profilename = document.querySelector('[data-quiet-profile-name]').getAttribute('data-quiet-profile-name');
         Quiet.receiver({profile: profilename,
              onReceive: onReceive,
