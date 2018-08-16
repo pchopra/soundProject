@@ -1,14 +1,21 @@
 var TextReceiver = (function() {
     Quiet.init({
-        profilesPrefix: "/soundProject/",
-        memoryInitializerPrefix: "/soundProject/",
+        // profilesPrefix: "/soundProject/",
+        // memoryInitializerPrefix: "/soundProject/",
+        // libfecPrefix: "/soundProject/"
+
+        profilesPrefix: "/",
+        memoryInitializerPrefix: "/",
         libfecPrefix: "/"
     });
     var target;
     var content = new ArrayBuffer(0);
     var warningbox;
 
+    var infobox;
+
     function onReceive(recvPayload) {
+        infobox.textContent = "Quiet received data";
         content = Quiet.mergeab(content, recvPayload);
         target.textContent = Quiet.ab2str(content);
         warningbox.classList.add("hidden");
@@ -26,12 +33,15 @@ var TextReceiver = (function() {
     };
 
     function onQuietReady() {
+        infobox.textContent = "Quiet is ready";
         var profilename = document.querySelector('[data-quiet-profile-name]').getAttribute('data-quiet-profile-name');
         Quiet.receiver({profile: profilename,
              onReceive: onReceive,
              onCreateFail: onReceiverCreateFail,
              onReceiveFail: onReceiveFail
         });
+        infobox.textContent = "Quiet is ready pt 2";
+
     };
 
     function onQuietFail(reason) {
@@ -43,7 +53,9 @@ var TextReceiver = (function() {
     function onDOMLoad() {
         target = document.querySelector('[data-quiet-receive-text-target]');
         warningbox = document.querySelector('[data-quiet-warning]');
+        infobox = document.querySelector('[infoBox]');
         Quiet.addReadyCallback(onQuietReady, onQuietFail);
+
     };
 
     document.addEventListener("DOMContentLoaded", onDOMLoad);
