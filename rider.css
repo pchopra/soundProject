@@ -1,5 +1,5 @@
 #firstPage {
-        background: url('parth.png') no-repeat center;
+        background: url('images/parth_pass.png') no-repeat center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -7,7 +7,7 @@
     }
 
 #secondPage {
-        background: url('pass.png') no-repeat center;
+        background: url('images/pass.png') no-repeat center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
