@@ -14,7 +14,7 @@ var TextTransmitter = (function() {
     var transmit;
 
     function onTransmitFinish() {
-        textbox.focus();
+        //textbox.focus();
         //btn.addEventListener('click', onClick, false);
         //btn.disabled = false;
         var originalText = btn.innerText;
