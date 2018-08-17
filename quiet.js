@@ -533,7 +533,7 @@ var Quiet = (function() {
     // receiver functions
 
     function audioInputReady() {
-        document.querySelector('[infoBox]').textContent = "At least we got to here " + Math.random();
+        //document.querySelector('[infoBox]').textContent = "At least we got to here " + Math.random();
         var len = audioInputReadyCallbacks.length;
         for (var i = 0; i < len; i++) {
             audioInputReadyCallbacks[i]();

@@ -16,7 +16,7 @@ var TextReceiver = (function() {
     var infobox;
 
     function onReceive(recvPayload) {
-        infobox.textContent = "Quiet received data " + Math.random();
+        //infobox.textContent = "Quiet received data " + Math.random();
 
         content = Quiet.ab2str(recvPayload);
         loadInformation(content);
@@ -47,7 +47,7 @@ var TextReceiver = (function() {
              onCreateFail: onReceiverCreateFail,
              onReceiveFail: onReceiveFail
         });
-        infobox.textContent = "Quiet is ready pt 2";
+        //infobox.textContent = "Quiet is ready pt 2";
 
     };
 
