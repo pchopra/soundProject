@@ -1,13 +1,13 @@
 var TextReceiver = (function() {
     Quiet.init({
-        profilesPrefix: "/soundProject/",
-        memoryInitializerPrefix: "/soundProject/",
-        libfecPrefix: "/soundProject/"
+        // profilesPrefix: "/soundProject/",
+        // memoryInitializerPrefix: "/soundProject/",
+        // libfecPrefix: "/soundProject/"
 
         
-        // profilesPrefix: "/",
-        // memoryInitializerPrefix: "/",
-        // libfecPrefix: "/"
+        profilesPrefix: "/",
+        memoryInitializerPrefix: "/",
+        libfecPrefix: "/"
     });
     var target;
     var content = new ArrayBuffer(0);

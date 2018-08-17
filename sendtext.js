@@ -1,12 +1,12 @@
 var TextTransmitter = (function() {
     Quiet.init({
-        profilesPrefix: "/soundProject/",
-        memoryInitializerPrefix: "/soundProject/",
-        libfecPrefix: "/"
-
-        // profilesPrefix: "/",
-        // memoryInitializerPrefix: "/",
+        // profilesPrefix: "/soundProject/",
+        // memoryInitializerPrefix: "/soundProject/",
         // libfecPrefix: "/"
+
+        profilesPrefix: "/",
+        memoryInitializerPrefix: "/",
+        libfecPrefix: "/"
     });
     var btn;
     var textbox;
@@ -26,8 +26,8 @@ var TextTransmitter = (function() {
         e.target.removeEventListener(e.type, arguments.callee);
         e.target.disabled = true;
         var originalText = e.target.innerText;
-        e.target.innerText = e.target.getAttribute('data-quiet-sending-text');
-        e.target.setAttribute('data-quiet-sending-text', originalText);
+        //e.target.innerText = e.target.getAttribute('data-quiet-sending-text');
+        //e.target.setAttribute('data-quiet-sending-text', originalText);
         var payload = textbox.value;
         if (payload === "") {
             onTransmitFinish();
@@ -37,7 +37,8 @@ var TextTransmitter = (function() {
     };
 
     function onQuietReady() {
-        var profilename = document.querySelector('[data-quiet-profile-name]').getAttribute('data-quiet-profile-name');
+        //var profilename = document.querySelector('[data-quiet-profile-name]').getAttribute('data-quiet-profile-name');
+        profilename ="audible"
         transmit = Quiet.transmitter({profile: profilename, onFinish: onTransmitFinish});
         btn.addEventListener('click', onClick, false);
     };
@@ -50,7 +51,9 @@ var TextTransmitter = (function() {
 
     function onDOMLoad() {
         btn = document.querySelector('[data-quiet-send-button]');
-        textbox = document.querySelector('[data-quiet-text-input]');
+        //textbox = document.querySelector('[data-quiet-text-input]');
+        textbox = localStorage.getItem('name');
+        console.log("Text " + textbox);
         warningbox = document.querySelector('[data-quiet-warning]');
         Quiet.addReadyCallback(onQuietReady, onQuietFail);
     };

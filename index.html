@@ -10,15 +10,24 @@
 	<body>
 	  <h1>Project Echo</h1>
 
+	  <textarea id="area" autofocus="true" autocapitalize="none" autocomplete="off" spellcheck="off" class="form-control" style="resize:none" rows="1" data-quiet-text-input></textarea>
+
 	  <div>
 	 	<button type="RiderAccount" class="btn btn-default" style="width:100%" 
-	 		onClick="window.location.href='rider.html'"> Rider</button>
+	 		onClick="myFunction()"> Rider</button>
 	  </div> 
 
 	  <div>
 	 	<button type="DriverAccount" class="btn btn-default" style="width:100%"
 	 		onClick="window.location.href='driver.html'" >Driver</button>
 	  </div> 
+
+	<script>
+	function myFunction() {
+	  window.location.href='rider.html';
+	  localStorage.setItem('name', document.getElementById('area').value);
+	}
+	</script>
 
 	</body>
 </html>
