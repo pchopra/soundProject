@@ -1,13 +1,13 @@
 var TextReceiver = (function() {
     Quiet.init({
-        profilesPrefix: "/soundProject/",
-        memoryInitializerPrefix: "/soundProject/",
-        libfecPrefix: "/soundProject/"
+        // profilesPrefix: "/soundProject/",
+        // memoryInitializerPrefix: "/soundProject/",
+        // libfecPrefix: "/soundProject/"
 
         
-        // profilesPrefix: "/",
-        // memoryInitializerPrefix: "/",
-        // libfecPrefix: "/"
+        profilesPrefix: "/",
+        memoryInitializerPrefix: "/",
+        libfecPrefix: "/"
     });
     var target;
     var content = new ArrayBuffer(0);
@@ -17,9 +17,12 @@ var TextReceiver = (function() {
 
     function onReceive(recvPayload) {
         infobox.textContent = "Quiet received data " + Math.random();
-        content = recvPayload;
+
+        content = Quiet.ab2str(recvPayload);
+        loadInformation(content);
         //content = Quiet.mergeab(content, recvPayload);
-        target.textContent = "Welcome to your ride " + Quiet.ab2str(content);
+        //target.textContent = "Welcome to your ride " + Quiet.ab2str(content);
+        target.textContent = "Welcome to your ride " + content;
         warningbox.classList.add("hidden");
         };
 
@@ -58,6 +61,7 @@ var TextReceiver = (function() {
         target = document.querySelector('[data-quiet-receive-text-target]');
         warningbox = document.querySelector('[data-quiet-warning]');
         infobox = document.querySelector('[infoBox]');
+
         Quiet.addReadyCallback(onQuietReady, onQuietFail);
 
     };

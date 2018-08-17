@@ -1,0 +1,16 @@
+body {
+	background: url('img-bg.jpg') no-repeat center;
+}
+
+h1 {
+	color:white;
+}
+
+div {
+	color:white;
+}
+
+a {
+  text-decoration: none !important;
+  outline: none;
+}

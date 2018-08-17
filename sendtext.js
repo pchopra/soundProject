@@ -1,12 +1,12 @@
 var TextTransmitter = (function() {
     Quiet.init({
-        profilesPrefix: "/soundProject/",
-        memoryInitializerPrefix: "/soundProject/",
-        libfecPrefix: "/"
-
-        // profilesPrefix: "/",
-        // memoryInitializerPrefix: "/",
+        // profilesPrefix: "/soundProject/",
+        // memoryInitializerPrefix: "/soundProject/",
         // libfecPrefix: "/"
+
+        profilesPrefix: "/",
+        memoryInitializerPrefix: "/",
+        libfecPrefix: "/"
     });
     var btn;
     var textbox;
@@ -30,7 +30,7 @@ var TextTransmitter = (function() {
         //var originalText = e.target.innerText;
         //e.target.innerText = e.target.getAttribute('data-quiet-sending-text');
         //e.target.setAttribute('data-quiet-sending-text', originalText);
-        var payload = textbox.value;
+        var payload = textbox;
         if (payload === "") {
             onTransmitFinish();
             return;
@@ -55,7 +55,7 @@ var TextTransmitter = (function() {
         btn = document.querySelector('[data-quiet-send-button]');
         //textbox = document.querySelector('[data-quiet-text-input]');
         textbox = localStorage.getItem('name');
-        console.log("Text " + textbox);
+        console.log(textbox + Math.random());
         warningbox = document.querySelector('[data-quiet-warning]');
         Quiet.addReadyCallback(onQuietReady, onQuietFail);
     };

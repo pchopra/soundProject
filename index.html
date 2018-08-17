@@ -25,7 +25,14 @@
 	<script>
 	function riderFunction() {
 	  window.location.href='rider.html';
+	  console.log(document.getElementById('area').value);
 	  localStorage.setItem('name', document.getElementById('area').value);
+	}
+
+	function driverFunction() {
+
+		window.location.href='driver.html';
+		localStorage.setItem('name', document.getElementById('area').value);
 	}
 	</script>
 
