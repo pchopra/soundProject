@@ -24,7 +24,7 @@ var TextTransmitter = (function() {
 
     function onClick(e) {
         e.target.removeEventListener(e.type, arguments.callee);
-        e.target.disabled = true;
+        //e.target.disabled = true;
         var originalText = e.target.innerText;
         //e.target.innerText = e.target.getAttribute('data-quiet-sending-text');
         //e.target.setAttribute('data-quiet-sending-text', originalText);
