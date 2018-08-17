@@ -1,5 +1,6 @@
 body {
 	background: url('img-bg.jpg') no-repeat center;
+	bak
 }
 
 h1 {
@@ -13,4 +14,19 @@ div {
 a {
   text-decoration: none !important;
   outline: none;
+}
+
+#verification {
+  position: fixed;
+  top: 75;
+  left: 400;
+  width:150px;
+  height:400px;
+  background-color: transparent;
+}
+
+#profileInformation {
+
+	width:500;
+	height:375;
 }

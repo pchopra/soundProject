@@ -20,9 +20,11 @@ var TextReceiver = (function() {
 
         content = Quiet.ab2str(recvPayload);
         loadInformation(content);
+        content = "";
         //content = Quiet.mergeab(content, recvPayload);
         //target.textContent = "Welcome to your ride " + Quiet.ab2str(content);
-        target.textContent = "Welcome to your ride " + content;
+        //target.textContent = "Welcome to your ride " + content;
+        target.textContent = "";
         warningbox.classList.add("hidden");
         };
 

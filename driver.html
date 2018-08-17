@@ -4,6 +4,7 @@
     <title>Driver Page</title>
     <link rel="stylesheet" href="driver.css">
      <script type="text/javascript" src="quiet.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <script type="text/javascript" src="main.js"></script>
      <script type="text/javascript" src="receivetext.js"></script>
      <script async type="text/javascript" src="quiet-emscripten.js"></script>
@@ -11,7 +12,7 @@
 </head>
 
 <body>
-	  <h1>Welcome Jose!</h1>
+	  <h1>HCV Driver Portal</h1>
 
     <div class="hidden" data-quiet-profile-name="audible"></div>
     <div class="wrapper">
@@ -20,8 +21,11 @@
 <!--       <div class infoBox>Put in info here</div>
  -->      
       <pre data-quiet-receive-text-target>Waiting...</pre>
-      <img profile></img>
-      <h2 profileName></h2>
+      <div id="profileInformation">
+        <img id="image" profile></img>
+        <div id="verification"></div>
+        <h2 profileName></h2>
+      </div>
       </section>
 
     </div>
